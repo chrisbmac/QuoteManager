@@ -1,0 +1,51 @@
+﻿@model Quotes;
+
+<h2>Add a Customer</h2>
+
+<form enctype="multipart/form-data" asp-controller="Home" asp-action="AddQuoteContr">
+    
+    <div class="form-group">
+        <label for="authorAd">Author:</label>
+        <input id="authorAd" type="text" asp-for="author" class="form-control" maxlength="50"/>
+        <span asp-validation-for="author" class="text-danger" />
+    </div>
+
+     <div class="form-group">
+        <label for="quoteAd">Quote:</label>
+        <input id="quoteAd" type="text" asp-for="quote" class="form-control" maxlength="300"/>
+        <span asp-validation-for="quote" class="text-danger" />
+    </div>
+
+     <div class="form-group">
+        <label for="permalinkAd">URL:</label>
+        <input id="permalinkAd" type="text" asp-for="permalink" class="form-control" maxlength="100"/>
+        <span asp-validation-for="permalink" class="text-danger" />
+    </div>
+    
+    <div class="form-group">
+        <div><input id="forImageSQL" type="text" asp-for="image" >Image:</input>
+            <span asp-validation-for="image" class="text-danger" />
+        </div>
+        <label class="btn btn-warning">
+            Browse Images <input id="btnUpload" type="file" name="selectedFile" hidden onchange="showFileName()">
+        </label>
+        
+        <span class="text-info" id="span_fileName" onchange="textBoxChanged"></span><br>
+        <span id="feedBack" class="text-warning"  >@ViewData["feedBack"]</span>
+        
+    </div>
+    
+    
+    <button type="submit" class="btn btn-success">Submit</button>
+
+        @* <div asp-validation-summary="All" class="text-danger"></div> *@
+        @*<div class="form-group">
+                <input type="submit" asp-controller="Home" asp-action="AddSubmit" class="btn btn-warning" Text="Add" />
+                <a asp-controller="Home" asp-action="Index"><input type="button" class="btn btn-warning" value="Cancel" /></a>
+            </div>*@
+</form>
+
+<h2>DELETE QUOTES</h2>
+<form asp-controller="Home" asp-action="DelQuoteContr">
+        <button type="submit" class="btn btn-success">Submit</button>
+</form>
