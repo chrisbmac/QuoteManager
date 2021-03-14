@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Y51PZN85SmxhR/X1FXZpbSQiAQD4FCIvLr9LP3KpUUI9l0pM8CG62C2oN6J8BBCoHsGPldV/h5nHmvZfk7P/DA==",
+  "dgSpecHash": "xmAaYC6x/PO9wiqu2beRolVNmHHkcO3ftxLxlS8Vxo8HCTj/iMNPI8/bjqYk5edUAARmNN1BQjEwnhfZO8aeNA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Chris\\Documents\\SCHOOLYEAR2\\Semester1\\WebAppProgramming\\NetCoreProj2Admin\\NetCoreProj2Admin.csproj",
+  "projectFilePath": "C:\\Users\\Chris\\Documents\\PROJSTOGOINPORTFOLIO\\SubmissionOfWebP2\\NetCoreProj2Admin\\NetCoreProj2Admin.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Chris\\.nuget\\packages\\google.protobuf\\3.0.0-beta4\\google.protobuf.3.0.0-beta4.nupkg.sha512",
     "C:\\Users\\Chris\\.nuget\\packages\\microsoft.csharp\\4.0.1\\microsoft.csharp.4.0.1.nupkg.sha512",

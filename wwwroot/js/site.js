@@ -7,11 +7,8 @@ function showFileName(){
     let mySString = btnUpload.substring(12);
     let mySQLImage = document.getElementById("forImageSQL");
     mySQLImage.value= mySString;
-    console.log(mySQLImage.value);
+   
+    console.log("mysql" + mySQLImage.value);
     $("#span_fileName").text("This is your file: " + mySString);
-    //$("#feedBack").text("");
+   
 }
-
-/*const hideFileName = () => {
-    return $("#span_fileName").text(""), $("#feedBack").text("");
-}*/

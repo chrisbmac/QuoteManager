@@ -1,51 +1,68 @@
 ﻿@model Quotes;
 
-<h2>Add a Customer</h2>
+<h2>Add a Quote</h2>
 
 <form enctype="multipart/form-data" asp-controller="Home" asp-action="AddQuoteContr">
     
     <div class="form-group">
         <label for="authorAd">Author:</label>
-        <input id="authorAd" type="text" asp-for="author" class="form-control" maxlength="50"/>
+        <input id="authorAd" style="width: 350px !important;" type="text" asp-for="author" class="form-control" maxlength="50"/>
         <span asp-validation-for="author" class="text-danger" />
     </div>
 
      <div class="form-group">
         <label for="quoteAd">Quote:</label>
-        <input id="quoteAd" type="text" asp-for="quote" class="form-control" maxlength="300"/>
+        <textarea id="quoteAd" style="width: 350px !important;" type="text" asp-for="quote" class="form-control" maxlength="300"></textarea>
         <span asp-validation-for="quote" class="text-danger" />
     </div>
 
      <div class="form-group">
         <label for="permalinkAd">URL:</label>
-        <input id="permalinkAd" type="text" asp-for="permalink" class="form-control" maxlength="100"/>
+        <input id="permalinkAd" style="width: 350px !important;" type="text" asp-for="permalink" class="form-control" maxlength="100"/>
         <span asp-validation-for="permalink" class="text-danger" />
     </div>
     
     <div class="form-group">
-        <div><input id="forImageSQL" type="text" asp-for="image" >Image:</input>
+        <div>Image:<br> <input id="forImageSQL" class="form-control" style="width: 350px !important;" type="text" asp-for="image" disabled></input>
             <span asp-validation-for="image" class="text-danger" />
         </div>
+        <br>
         <label class="btn btn-warning">
-            Browse Images <input id="btnUpload" type="file" name="selectedFile" hidden onchange="showFileName()">
+            Browse Images <input class="form-control" style="width: 350px !important;" id="btnUpload" type="file" name="selectedFile" hidden onchange="showFileName()">
         </label>
         
-        <span class="text-info" id="span_fileName" onchange="textBoxChanged"></span><br>
-        <span id="feedBack" class="text-warning"  >@ViewData["feedBack"]</span>
+        <span class="text-info" id="span_fileName"></span><br>
+        <span id="feedBack" class="text-warning">@TempData["feedBack"]</span>
+        <span>@TempData["addedFB"]</span>
         
     </div>
-    
-    
-    <button type="submit" class="btn btn-success">Submit</button>
+    <input type="submit" class="btn btn-success" value="Submit">
 
-        @* <div asp-validation-summary="All" class="text-danger"></div> *@
-        @*<div class="form-group">
-                <input type="submit" asp-controller="Home" asp-action="AddSubmit" class="btn btn-warning" Text="Add" />
-                <a asp-controller="Home" asp-action="Index"><input type="button" class="btn btn-warning" value="Cancel" /></a>
-            </div>*@
 </form>
-
+<br>
+<hr class="dotted"></hr>
 <h2>DELETE QUOTES</h2>
+<span class="text-warning">@TempData["deletionFeedback"]</span>
 <form asp-controller="Home" asp-action="DelQuoteContr">
-        <button type="submit" class="btn btn-success">Submit</button>
+    
+
+    @{if (Model.sltListItem_ForDel.Count > 1){
+    <select id="list_deleteQuotes" class="form-select"
+        asp-items= "Model.sltListItem_ForDel"
+        asp-for="quoteID" 
+        style="width: 250px !important;"
+        ></select>
+
+    } else {
+        <select id="list_deleteQuotes" class="form-select form-select-sm mb-3"
+            asp-items= "Model.sltListItem_ForDel"
+            asp-for="quoteID" 
+            style="width: 250px !important;"
+           ></select>
+
+    }}
+    <input type="submit" class="btn btn-danger" value="Delete Quote">
+    
 </form>
+
+

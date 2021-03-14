@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Chris\\Documents\\SCHOOLYEAR2\\Semester1\\WebAppProgramming\\NetCoreProj2Admin\\NetCoreProj2Admin.csproj": {}
+    "C:\\Users\\Chris\\Documents\\PROJSTOGOINPORTFOLIO\\SubmissionOfWebP2\\NetCoreProj2Admin\\NetCoreProj2Admin.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Chris\\Documents\\SCHOOLYEAR2\\Semester1\\WebAppProgramming\\NetCoreProj2Admin\\NetCoreProj2Admin.csproj": {
+    "C:\\Users\\Chris\\Documents\\PROJSTOGOINPORTFOLIO\\SubmissionOfWebP2\\NetCoreProj2Admin\\NetCoreProj2Admin.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Chris\\Documents\\SCHOOLYEAR2\\Semester1\\WebAppProgramming\\NetCoreProj2Admin\\NetCoreProj2Admin.csproj",
+        "projectUniqueName": "C:\\Users\\Chris\\Documents\\PROJSTOGOINPORTFOLIO\\SubmissionOfWebP2\\NetCoreProj2Admin\\NetCoreProj2Admin.csproj",
         "projectName": "NetCoreProj2Admin",
-        "projectPath": "C:\\Users\\Chris\\Documents\\SCHOOLYEAR2\\Semester1\\WebAppProgramming\\NetCoreProj2Admin\\NetCoreProj2Admin.csproj",
+        "projectPath": "C:\\Users\\Chris\\Documents\\PROJSTOGOINPORTFOLIO\\SubmissionOfWebP2\\NetCoreProj2Admin\\NetCoreProj2Admin.csproj",
         "packagesPath": "C:\\Users\\Chris\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Chris\\Documents\\SCHOOLYEAR2\\Semester1\\WebAppProgramming\\NetCoreProj2Admin\\obj\\",
+        "outputPath": "C:\\Users\\Chris\\Documents\\PROJSTOGOINPORTFOLIO\\SubmissionOfWebP2\\NetCoreProj2Admin\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Chris\\AppData\\Roaming\\NuGet\\NuGet.Config"

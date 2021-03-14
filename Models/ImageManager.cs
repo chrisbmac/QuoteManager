@@ -45,6 +45,19 @@ namespace NetCoreProj2Admin.Models
                 _imageSources.Add("/" + targetFolder + "/" + Path.GetFileName(imageArray[i]));
             }
         }
+        // deleting images from server
+        public bool imageDeletion(IWebHostEnvironment env,string filename) {
+        try {
+            // path to file for delete
+            string fileforDel = env.WebRootPath + targetFolder + "/uploads/" + filename;
+            // delete the file
+            File.Delete(fileforDel);
+        } catch (Exception e) {
+            Console.WriteLine("Problem deleting image from server" + e);
+            return false;
+        }
+        return true;
         
+        }
     }
 } 

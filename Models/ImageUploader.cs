@@ -25,8 +25,12 @@ namespace NetCoreProj2Admin.Models
         private string fullPath;
         
         private static string _feedBack;
+
+        private string _fileName;
+        Quotes myQuotes = new Quotes();
         public ImageUploader(IWebHostEnvironment env, string myTargetFolder) {
             // initialization
+            
             targetFolder = myTargetFolder;         
             _feedBack = "";
             _num_ImgValidation = -1;
@@ -48,6 +52,11 @@ namespace NetCoreProj2Admin.Models
             }
         }
 
+        public string fileName { 
+            get {
+                return _fileName;
+            }
+        }
         // --------------------------------------------------- public methods
         public int uploadImage(IFormFile file) {
             // has the user selected a file to upload?
@@ -60,11 +69,16 @@ namespace NetCoreProj2Admin.Models
                     long size = file.Length;
                     if ((size > 0) && (size < UPLOADLIMIT)) {
                         // is the filename too long?
-                        string fileName = Path.GetFileName(file.FileName);
-                        if (fileName.Length <= 100) {
+                        // Does the file exist?
+                        _fileName = Path.GetFileName(file.FileName);
+                        if(File.Exists(fullPath + _fileName)) {
+                            _fileName = myQuotes.duplicateFile(_fileName);
+                            
+                        }
+                        if (_fileName.Length <= 100) {
 
                             // WE are go to save the file to the server!!!
-                            FileStream stream = new FileStream((fullPath + fileName), FileMode.Create);
+                            FileStream stream = new FileStream((fullPath + _fileName), FileMode.Create);
                             try {
                                 file.CopyTo(stream);
                                 stream.Close();
